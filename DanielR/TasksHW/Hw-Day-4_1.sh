@@ -1,0 +1,14 @@
+gcc -E Hw-Day-4_1program.c -o Hw-Day-4_1program.i;
+gcc -S Hw-Day-4_1program.i -o Hw-Day-4_1program.s;
+gcc -C Hw-Day-4_1program.s -o Hw-Day-4_1program.o;
+gcc -E Hw-Day-4_1swap.c -o Hw-Day-4_1swap.i;
+gcc -S Hw-Day-4_1swap.i -o Hw-Day-4_1swap.s;
+gcc -C Hw-Day-4_1swap.s -o Hw-Day-4_1swap.o;
+gcc Hw-Day-4_1*.o -o Hw-Day-4_1program.exe;
+cat Hw-Day-4_1program.i;
+cat Hw-Day-4_1swap.i;
+cat Hw-Day-4_1program.s;
+cat Hw-Day-4_1swap.s;
+hexdump -C Hw-Day-4_1program.o;
+hexdump -C Hw-Day-4_1swap.o;
+hexdump -C Hw-Day-4_1program.exe;

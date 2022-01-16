@@ -1,0 +1,48 @@
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ mkdir day1
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ touch ./day1/test1 ./day1/test2 ./day1/test3
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ echo "Hello Bash" > ./day1/test1
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ date > ./day1/test2
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ pwd > ./day1/test3
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ mkdir ./day1/testDir
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ cp ./day1/test1 ./day1/testDir/test1
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ cp ./day1/test2 ./day1/testDir/test2
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ cp ./day1/test3 ./day1/testDir/test3
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ mkdir ./day1/testDir/testNested
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ cp ./day1/test1 ./day1/testDir/testNested/test1
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ cp ./day1/test2 ./day1/testDir/testNested/test2
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ tree
+.
+├── day1
+    ├── test1
+    ├── test2
+    ├── test3
+    └── testDir
+        ├── test1
+        ├── test2
+        ├── test3
+        └── testNested
+            ├── test1
+            └── test2
+
+ 3 directories, 8 files
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ cat ./day1/test1 ./day1/test2 ./day1/test3
+Hello Bash
+dom 31 oct 2021 09:29:35 EET
+/home/daniel/MMS
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ rm ./day1/test1 ./day1/test2 ./day1/test3
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ mkdir ./day1/testDirCopy
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ cp -r ./day1/testDir/* ./day1/testDirCopy/
+daniel@daniel-GF63-Thin-10SCXR:~/MMS$ cd day1/
+daniel@daniel-GF63-Thin-10SCXR:~/MMS/day1$ rm ./testDir/test1
+daniel@daniel-GF63-Thin-10SCXR:~/MMS/day1$ rm -rf ./testDirCopy/*
+daniel@daniel-GF63-Thin-10SCXR:~/MMS/day1$ tree
+.
+├── testDir
+│   ├── test2
+│   ├── test3
+│   └── testNested
+│       ├── test1
+│       └── test2
+└── testDirCopy
+
+3 directories, 4 files
